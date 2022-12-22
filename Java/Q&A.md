@@ -8,4 +8,24 @@ It is also common practice to use all lowercase letters and underscores for the 
 
 These conventions are not required by the Java language, but they are widely followed in the Java community to improve the readability and consistency of code.
 
-I hope this helps! Let me know if you have any questions.
+##### What is the variables in java
+
+In Java, there are different types of variables, for example:
+
+String - stores text, such as "Hello". String values are surrounded by double quotes
+int - stores integers (whole numbers), without decimals, such as 123 or -123
+float - stores floating point numbers, with decimals, such as 19.99 or -19.99
+char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+boolean - stores values with two states: true or false
+
+##### What's data type in java
+
+```java
+int myNum = 5;               // Integer (whole number)
+float myFloatNum = 5.99f;    // Floating point number
+char myLetter = 'D';         // Character
+boolean myBool = true;       // Boolean
+String myText = "Hello";     // String
+```
+
+![output](img/PrimitiveDataTypes.png)
