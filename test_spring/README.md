@@ -1,6 +1,7 @@
 # Maven Package Process
 
-user: When I ran ` mvn package` for my pom.xml, what happens? this is my pom.xml
+### user: When I ran ` mvn package` for my pom.xml, what happens? this is my pom.xml
+
 `<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -32,7 +33,9 @@ user: When I ran ` mvn package` for my pom.xml, what happens? this is my pom.xml
 5. After the build is successful, Maven will generate the distributable package (`myproject-0.0.1-SNAPSHOT.jar`) in the `target` directory of your project.
 
 It's worth noting that your example `pom.xml` has a minimal configuration. In a real-world project, you'd typically see more configuration settings and dependencies specified in the `pom.xml` file, such as build plugins and additional dependencies.
-user: Cool there's a myproject-0.0.1-SNAPSHOT.jar in my target. what's that?
+
+### user: Cool there's a myproject-0.0.1-SNAPSHOT.jar in my target. what's that?
+
 assistant: The `myproject-0.0.1-SNAPSHOT.jar` file generated in your `target` directory is a Java Archive (JAR) file, which is a package file format used to bundle Java class files, associated metadata, and resources (such as text, images, and XML files) into a single file for distribution and deployment.
 
 In your specific case:
@@ -49,7 +52,9 @@ java -jar target/myproject-0.0.1-SNAPSHOT.jar
 ```
 
 This command will start your Spring Boot application using the embedded web server, assuming that the necessary configurations and dependencies are set up correctly in your `pom.xml`.
-user: no main manifest attribute, in target/myproject-0.0.1-SNAPSHOT.jar
+
+### user: no main manifest attribute, in target/myproject-0.0.1-SNAPSHOT.jar
+
 assistant: The "no main manifest attribute" error occurs when you try to run a JAR file that doesn't have a `Main-Class` entry in its manifest file (located within the JAR file as `META-INF/MANIFEST.MF`). The `Main-Class` attribute tells the Java runtime which class contains the `main` method to execute when running the JAR.
 
 Since you are using Spring Boot, you should have a class with a `main` method annotated with `@SpringBootApplication`. To make your JAR executable, you need to configure the Maven build to include the `Main-Class` attribute in the manifest file.
